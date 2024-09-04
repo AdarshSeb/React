@@ -8,3 +8,6 @@
 
 
 #studentRegistration          ---->https://studentregistrationform-react.netlify.app/
+
+
+#weatherApp                   ---->https://api-weatherap.netlify.app/
