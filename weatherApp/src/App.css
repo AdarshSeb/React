@@ -1,0 +1,21 @@
+.weather-container {
+    background-color: #6db1f5; 
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .custom-button {
+    background-color: #ff5733; 
+    border-color: #ff5733;
+    color: white;
+  }
+  
+  .custom-button:hover {
+    background-color: #c70039;
+    border-color: #c70039;
+  }
+  
+  .text-light {
+    color: #f8f9fa;
+  }
+  
