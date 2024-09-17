@@ -11,3 +11,8 @@
 
 
 #weatherApp                   ---->https://api-weatherap.netlify.app/
+
+
+
+
+#Parallax-Slider             ----->https://parallax-slider-react-site.netlify.app/
