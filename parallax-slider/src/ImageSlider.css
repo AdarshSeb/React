@@ -1,0 +1,67 @@
+.slider-container {
+  position: relative;
+  max-width: 100%;  /* Ensures the slider does not overflow */
+  margin: 0 auto;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;  /* This restricts the image height to 80% of the viewport height */
+  object-fit: cover;  /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+.caption-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.caption-text {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.caption-container:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Custom Arrow Styles */
+.custom-arrow {
+  font-size: 2rem;
+  color: rgb(233, 70, 70);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.custom-arrow:hover {
+  color: #007bff; /* Changes color on hover */
+  transform: scale(1.2);
+}
+
+.slick-prev.custom-arrow {
+  left: 10px;
+}
+
+.slick-next.custom-arrow {
+  right: 10px;
+}
+
+/* Dots */
+.slick-dots li button:before {
+  font-size: 1.2rem;
+  color: #fff;  /* White dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff;  /* Highlight active dot */
+}

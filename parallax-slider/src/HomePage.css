@@ -1,0 +1,48 @@
+.home-page {
+  height: 100vh;
+  background-color: #bad8f7; /* Light background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content {
+  color: #343a40; /* Dark text for better contrast */
+}
+
+h1 {
+  font-size: 3em;
+  color: #212529; /* Darker color for better visibility */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Lighter and subtle shadow */
+}
+
+button {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #0d6efd; /* Slightly brighter on hover for primary button */
+}
+
+button.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+button.btn-success {
+  background-color: #198754;
+  border-color: #198754;
+}
+
+button.btn-primary:hover {
+  background-color: #0b5ed7; /* Lighter hover effect */
+}
+
+button.btn-success:hover {
+  background-color: #157347; /* Lighter hover effect */
+}

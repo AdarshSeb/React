@@ -1,0 +1,81 @@
+.image-slider-page {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.intro-content {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e9ecef; /* Light background for intro section */
+}
+
+.intro-heading {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #495057;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slider-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Light background for slider section */
+}
+
+.slider-heading {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.slider-box {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background for slider box */
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-content {
+  padding: 40px 20px;
+  background-color: #e9ecef; /* Light background for additional content section */
+  text-align: center;
+}
+
+.additional-heading {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.dummy-text {
+  font-size: 1.2rem;
+  color: #495057;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.back-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+  background-color: #dc3545; /* Danger variant hover effect */
+}
