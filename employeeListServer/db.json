@@ -1,0 +1,40 @@
+{
+  "employees": [
+    {
+      "id": "44a7",
+      "username": "Adarsh",
+      "email": "mmtesting2023@gmail.com",
+      "status": "active"
+    },
+    {
+      "id": "cd69",
+      "username": "JohnDoe",
+      "email": "john@example.com",
+      "status": "inactive"
+    },
+    {
+      "id": "7a7b",
+      "username": "aaa",
+      "email": "mmtesting2024@gmail.com",
+      "status": "inactive"
+    },
+    {
+      "id": "71b1",
+      "username": "Adarsh",
+      "email": "mmtesting2024@gmail.com",
+      "status": "inactive"
+    },
+    {
+      "id": "d0a4",
+      "username": "Adarsh",
+      "email": "mmtesting2024@gmail.com",
+      "status": "active"
+    },
+    {
+      "id": "23d0",
+      "username": "Adarsh",
+      "email": "mmtesting2024@gmail.com",
+      "status": "active"
+    }
+  ]
+}
