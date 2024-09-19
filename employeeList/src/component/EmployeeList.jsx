@@ -19,7 +19,7 @@ const EmployeeList = () => {
   // Fetch Employees from JSON server
   const fetchEmployees = async () => {
     try {
-      const response = await fetch('http://localhost:3000/employees');
+      const response = await fetch('https://employeeserver-w3fn.onrender.com/employees');
       const data = await response.json();
       setEmployees(data);
     } catch (error) {
@@ -29,23 +29,23 @@ const EmployeeList = () => {
 
   // Add or Update Employee
   const addOrUpdateEmployee = async (employee) => {
-    // Check for existing email before adding/updating
-    const isEmailDuplicate = employees.some(
-      (existingEmployee) =>
-        existingEmployee.email === employee.email &&
-        existingEmployee.id !== employee.id
-    );
+    // Check for duplicate emails only when adding a new employee (i.e., when `isEditing` is false)
+    if (!isEditing) {
+      const isEmailDuplicate = employees.some(
+        (existingEmployee) => existingEmployee.email === employee.email
+      );
 
-    if (isEmailDuplicate) {
-      setAlertMessage('Email already exists! Please use a different email.');
-      setAlertType('danger');
-      return; // Stop further execution
+      if (isEmailDuplicate) {
+        setAlertMessage('Email already exists! Please use a different email.');
+        setAlertType('danger');
+        return;
+      }
     }
 
     try {
       if (isEditing) {
-        // Update existing employee
-        await fetch(`http://localhost:3000/employees/${employee.id}`, {
+        // Update the existing employee
+        await fetch(`https://employeeserver-w3fn.onrender.com/employees/${employee.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(employee),
@@ -53,8 +53,8 @@ const EmployeeList = () => {
         setAlertMessage(`Employee ${employee.username} updated successfully!`);
         setAlertType('info');
       } else {
-        // Add new employee
-        await fetch('http://localhost:3000/employees', {
+        // Add a new employee
+        await fetch('https://employeeserver-w3fn.onrender.com/employees', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -76,7 +76,7 @@ const EmployeeList = () => {
   // Delete Employee
   const deleteEmployee = async (id, username) => {
     try {
-      await fetch(`http://localhost:3000/employees/${id}`, {
+      await fetch(`https://employeeserver-w3fn.onrender.com/employees/${id}`, {
         method: 'DELETE',
       });
       setAlertMessage(`Employee ${username} deleted successfully!`);
@@ -89,9 +89,9 @@ const EmployeeList = () => {
 
   // Handle Edit Click
   const handleEdit = (employee) => {
-    setNewEmployee(employee);
+    setNewEmployee({ ...employee }); // Update state with the selected employee
     setIsEditing(true);
-    setIsFormVisible(true); // Show form
+    setIsFormVisible(true); // Show form for editing
   };
 
   // Reset Form
@@ -103,7 +103,7 @@ const EmployeeList = () => {
       status: 'active',
     });
     setIsEditing(false);
-    setIsFormVisible(false); // Hide form after submitting
+    setIsFormVisible(false); // Hide form after submission
   };
 
   // Handle Form Submission
@@ -118,15 +118,6 @@ const EmployeeList = () => {
     }
   };
 
-  // Show Alert Message
-  const showAlert = (message) => {
-    setAlertMessage(message);
-    setAlertVisible(true);
-    setTimeout(() => {
-      setAlertVisible(false);
-    }, 2000); // Hide after 2 seconds
-  };
-
   useEffect(() => {
     fetchEmployees();
   }, []);
@@ -134,55 +125,45 @@ const EmployeeList = () => {
   // Show alert message when alertMessage changes
   useEffect(() => {
     if (alertMessage) {
-      showAlert(alertMessage);
+      setAlertVisible(true);
+      setTimeout(() => {
+        setAlertVisible(false);
+      }, 2000); // Hide alert after 2 seconds
     }
   }, [alertMessage]);
-
-  // Determine alert styles based on alert type
-  const getAlertStyles = () => {
-    switch (alertType) {
-      case 'success':
-        return { backgroundColor: '#d4edda', color: '#155724', borderColor: '#c3e6cb' };
-      case 'danger':
-        return { backgroundColor: '#f8d7da', color: '#721c24', borderColor: '#f5c6cb' };
-      case 'info':
-        return { backgroundColor: '#d1ecf1', color: '#0c5460', borderColor: '#bee5eb' };
-      default:
-        return {};
-    }
-  };
 
   return (
     <div
       className="container mt-5"
       style={{
         position: 'relative',
-        minHeight: '100vh', // Full viewport height
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         padding: '20px',
       }}
     >
-      <h1 className='text-center'>Employee Management</h1>
+      <h1 className="text-center">Employee Management</h1>
 
       {/* Alert Message */}
       {alertVisible && (
         <div
           className="alert"
           style={{
-            ...getAlertStyles(),
+            backgroundColor: alertType === 'danger' ? '#f8d7da' : '#d4edda',
+            color: alertType === 'danger' ? '#721c24' : '#155724',
+            border: '1px solid',
+            borderRadius: '0.25rem',
+            padding: '10px',
             position: 'fixed',
             top: '10px',
             left: '50%',
             transform: 'translateX(-50%)',
-            zIndex: 1000, // Ensure alert is on top of other content
+            zIndex: 1000,
             width: '30%',
             maxWidth: '300px',
             textAlign: 'center',
-            border: '1px solid',
-            borderRadius: '0.25rem',
-            padding: '10px',
             fontSize: '0.875rem',
             fontWeight: 'bold',
           }}

@@ -11,7 +11,7 @@ const EmployeeForm = ({ onSubmit, employee, onCancel }) => {
 
   useEffect(() => {
     if (employee) {
-      setFormData(employee);
+      setFormData(employee); // Populate the form with the employee data when editing
     } else {
       setFormData({
         id: '',
@@ -33,7 +33,7 @@ const EmployeeForm = ({ onSubmit, employee, onCancel }) => {
       alert('Please fill out both username and email.');
       return;
     }
-    onSubmit(formData);
+    onSubmit(formData); // Call the parent component's submit handler
   };
 
   return (
@@ -76,7 +76,7 @@ const EmployeeForm = ({ onSubmit, employee, onCancel }) => {
       </Form.Group>
 
       <Form.Group className="mt-4">
-        <Button variant="primary " type="submit">
+        <Button variant="primary" type="submit">
           {employee ? 'Update Employee' : 'Add Employee'}
         </Button>
         <Button variant="secondary ms-5" onClick={onCancel} className="ml-2">
