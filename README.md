@@ -14,13 +14,11 @@
 
 
 
-
 #Parallax-Slider             ----->https://parallax-slider-react-site.netlify.app/
 
 
 
 #react-calculator           ------>https://calculator-website-react.netlify.app/
-
 
 
 
