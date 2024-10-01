@@ -1,0 +1,141 @@
+/* Base Container Styles */
+.quiz-container {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 700px; /* Adjusted width for question content */
+    min-height: 500px; /* Ensures vertical alignment */
+    margin: 50px auto; /* Centered and spaced from top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Theme Styles */
+.standard {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: #333;
+}
+
+.creative {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+}
+
+/* Question and Answer Section */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Answer Button Styling */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Take full container width */
+}
+
+.answer-button {
+    background: linear-gradient(135deg, #fff, #ddd);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.answer-button:hover {
+    background: linear-gradient(135deg, #61dafb, #21a1f1);
+    border-color: #21a1f1;
+    box-shadow: 0 6px 15px rgba(33, 161, 241, 0.5);
+    transform: scale(1.05);
+}
+
+.answer-button.selected {
+    background: linear-gradient(135deg, #61dafb, #1e90ff);
+    border: 2px solid #1e90ff;
+    color: white;
+    box-shadow: 0 4px 15px rgba(33, 161, 241, 0.8);
+}
+
+/* Navigation Button Styling */
+.next-button,
+.try-again-button {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #21a1f1, #1e90ff);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(33, 161, 241, 0.5);
+}
+
+.next-button:hover,
+.try-again-button:hover {
+    background: linear-gradient(135deg, #1e90ff, #007acc);
+    box-shadow: 0 6px 18px rgba(33, 161, 241, 0.8);
+    transform: translateY(-3px);
+}
+
+/* Motivation Quote Styling */
+.motivation-quote {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+/* Theme Switcher Button */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.theme-switcher:hover {
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.5);
+}
+
+/* Result Section Styling */
+.result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.result-section p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+.result-section .try-again-button {
+    margin-top: 30px;
+}

@@ -1,0 +1,21 @@
+/* components/Scoreboard.css */
+.scoreboard-container {
+    background: linear-gradient(135deg, #4a4a4a, #2f2f2f);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.motivation {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
