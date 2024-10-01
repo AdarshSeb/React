@@ -1,6 +1,9 @@
 .home-page {
-  height: 100vh;
-  background-color: #bad8f7; /* Light background color */
+  height: 100vh; /* Full viewport height */
+  background-image: url('/images/parallax-bg2.jpg'); /* Path to your background image */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image from repeating */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +11,7 @@
 
 .home-content {
   color: #343a40; /* Dark text for better contrast */
+  text-align: center; /* Centers the text */
 }
 
 h1 {
