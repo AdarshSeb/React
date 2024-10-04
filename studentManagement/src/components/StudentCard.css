@@ -1,0 +1,81 @@
+/* StudentCard.css */
+.student-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .student-card-header {
+    height: 120px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .student-card-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .edit-btn {
+    background-color: #ffaf00;
+    border: none;
+  }
+  
+  .edit-btn:hover {
+    background-color: #ffa700;
+  }
+  
+  .delete-btn {
+    background-color: #ff5f57;
+    border: none;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff4444;
+  }
+  
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .student-card {
+    border: 1px solid #007bff;
+    border-radius: 10px;
+  }
+  
+  .student-card-header {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .student-card-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .student-card-header {
+    margin-bottom: 1rem; /* Adjust spacing as needed */
+  }
+  
+  .student-card-icon {
+    color: #007bff; /* Change icon color if desired */
+  }
+  
+  
+  
