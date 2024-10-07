@@ -1,0 +1,31 @@
+/* TodoList.css */
+/* TodoList.css */
+
+/* Adjust modal size */
+.delete-modal .modal-content {
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 300px; /* Set desired width */
+    max-width: 90%; /* Responsive width */
+  }
+  
+  .delete-modal .modal-header {
+    border-bottom: 1px solid #dee2e6; /* Light border */
+  }
+  
+  .delete-modal .modal-footer {
+    border-top: 1px solid #dee2e6; /* Light border */
+  }
+  
+  
+  .delete-modal .button-cancel {
+    background-color: #f8f9fa; /* White color for cancel button */
+    color: #000; /* Black text color */
+    transition: background-color 0.3s; /* Smooth transitions */
+  }
+  
+  .delete-modal .button-cancel:hover {
+    background-color: #e2e6ea; /* Light gray on hover */
+  }
+  
